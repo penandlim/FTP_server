@@ -52,9 +52,9 @@ int main()
     curl_easy_perform(curl);
 
 	cout << endl << "Public IP : ";
-	Sleep(1000);
+	Sleep(10);
     cout << publicip << endl;
-	Sleep(1000);
+	Sleep(10);
 
     curl_easy_cleanup(curl);
     curl_global_cleanup();
@@ -75,9 +75,9 @@ int main()
 		curl_easy_perform(backupcurl);
 
 		cout << endl << "Public IP : ";
-		Sleep(1000);
+		Sleep(10);
 		cout << publicip << endl;
-		Sleep(1000);
+		Sleep(10);
 
 		curl_easy_cleanup(backupcurl);
 		curl_global_cleanup();

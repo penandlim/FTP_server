@@ -32,6 +32,7 @@ size_t writeCallback(char* buf, size_t size, size_t nmemb, void* up)
 
 int main()
 {
+	char nig = 'A';
 	HWND hWnd = GetConsoleWindow();
 	//ShowWindow(hWnd, SW_HIDE);
 
@@ -127,9 +128,7 @@ int main()
 		cout << "2 : Edit Announcement" << endl;
 		cout << "0 : Quit" << endl;
 
-		char nig = 'A';
 		nig = _getch();
-
 		switch (nig)
 		{
 		case '1':
@@ -142,6 +141,7 @@ int main()
 			outputData.close();
 			break;
 		case '2':
+			cout <<"";
 			announcement_str = editannouncement();
 
 			outputData.open("C://Dropbox//Public//FTP-Server//data.txt");
@@ -177,7 +177,8 @@ std::string editcolor()
 
 std::string editannouncement()
 {
-	cout << endl << "New Announcement : ";
+	cout << endl;
+	cout << "New Announcement : ";
 	std::string new_announcement;
 	std::getline(cin, new_announcement);
 	return new_announcement;
